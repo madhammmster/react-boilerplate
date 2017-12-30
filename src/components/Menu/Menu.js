@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
-import {connect} from 'react-redux'
 
 import Styles from './styles/Menu.scss';
 
@@ -33,18 +32,10 @@ class Menu extends React.Component {
                     {this.renderMenuItems()}
                 </ul>
 
-                <h6>
-                   App status: {this.props.status}
-                </h6>
-
             </div>
         )
     }
 
 }
 
-function mapStateToProps(state) {
-    return state;
-}
-
-export default connect(mapStateToProps, null, null, {pure: false})(Menu);
+export default Menu;
